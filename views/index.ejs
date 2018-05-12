@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+<body>
+    <table id="table" >
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Location</th>
+            </tr>
+        </thead>
+         <tbody>
+          <% users.forEach(function (user) { %>
+            <tr>
+                <td><%= user.name %></td>
+                <td><%= user.location %></td>
+            </tr>
+         <% }) %>
+         </tbody>
+    </table>
+
+<form><input name="name"></form>
+</body>
+</html>
+
