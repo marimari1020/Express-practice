@@ -11,3 +11,15 @@ a {
 form{
 margin: 20px;
 }
+
+thead{
+background-color:cyan;
+}
+
+td{
+padding:5px 20px 5px 20px;
+}
+
+.formstyle{
+margin-top:30px;
+}
