@@ -13,7 +13,7 @@ router.get('/', function (req, res) {
   app.connection.query('select * from employees', function (err, rows) {
     array.users = rows;
     array.title = 'Express Users';
-    array.content = 'This is Index Page!<br>' + '※メッセージを書いて送信して下さい。';
+    array.content = 'データを検索したい方の名前を入力してください。';
    res.render('index', array);
 
   tablerows= rows;
@@ -34,7 +34,7 @@ router.post('/',(req, res) => {
 	'select * from employees where name = ?', [req.body.message], 
 	function (err, rows) { 
 		array.users = rows; 
-		array.content = 'This is Posted Page!<br>' +  'あなたは「<b>' + req.body.message +  '</b>」と送信しました。';  
+		array.content = '「<b>' + req.body.message +  '</b>」さんについての情報を表示します。';  
 		res.render('index', array)
 	}
    );
