@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+<body>
+
+    <table id="table" >       
+        <thead>       
+            <tr>       
+                <th>Username</th>       
+                <th>Location</th>       
+                <th>Business Area</th>       
+            </tr>       
+        </thead>       
+        <tbody> 
+          <% users.forEach(function (user) { %>
+            <tr>
+                <td><%= user.name %></td>
+                <td><%= user.location %></td>
+                <td><%= user.area %></td>
+            </tr>
+          <% }); %>
+        </tbody>
+    </table> 
+
+   
+
+</body>
+</html>
+
